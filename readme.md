@@ -73,3 +73,18 @@ git submodule update
 # Just DOO ITT
 git submodule update --init
 ```
+
+## Pros and Cons
+
+### Pros
+
+- You can commit changes to the sub-project(s) while working on the super-project
+- The git history of the super-project(s) tracks its dependency history on the sub-project(s)
+- And more...
+
+### Cons
+
+- Adds a layer of abstraction to version control
+- Git commands are relative to the context of your working directory (you gotta
+  think about that now)
+- And more...
