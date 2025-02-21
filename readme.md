@@ -64,6 +64,8 @@ You can commit this submodule in the super-project like any other change. When
 you or someone new clones the project, you'll also want to initialize the
 modules (by default, submodules are not cloned)
 
+TODO: Add a bit about updating the reference of the submodule
+
 ```sh
 # Set up the submodule config in the super-project
 git submodule init
