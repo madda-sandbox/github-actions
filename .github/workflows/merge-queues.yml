@@ -1,0 +1,12 @@
+name: Merge Queue Test
+
+on:
+  pull_request:
+  merge_group:
+
+jobs:
+  naptime:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sleepytime
+      run: sleep 300
