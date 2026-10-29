@@ -1,0 +1,21 @@
+name: Toolchain Image Smoke Test
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    # No credentials on purpose: this is what a PR from a fork gets, so the
+    # image has to be pullable anonymously.
+    container:
+      image: ghcr.io/madda-sandbox/toolchain-image:latest
+    steps:
+    - name: Toolchain present
+      run: |
+        jq --version
+        cat /etc/toolchain-image-release
